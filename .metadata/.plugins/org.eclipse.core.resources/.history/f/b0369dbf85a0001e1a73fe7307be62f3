@@ -1,0 +1,14 @@
+import java.net.*;
+import java.io.*;
+
+public class Client {
+	
+	
+	public static void main(String[] args) throws Exception {
+		DataOutputStream dos = new DataOutputStream;
+		Socket clientSocket = new Socket("localhost", 8888);
+		
+		DataOutputStream dos = clientSocket.getOutputStream();
+	}
+
+}

@@ -1,0 +1,18 @@
+import java.io.*;
+import java.net.*;
+import java.util.*;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+public class Server{
+	
+	public static void main(String[] args) throws IOException {
+		ServerSocket ss = new ServerSocket(9999);
+		System.out.println("Server started, listening on port 9999");
+		while (true) {
+			Socket client = new Socket();
+			client = ss.accept();
+		}
+		
+	}
+}

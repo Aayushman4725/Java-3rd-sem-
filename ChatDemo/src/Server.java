@@ -1,0 +1,24 @@
+import java.io.*;
+import java.net.*;
+import java.util.*;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+public class Server{
+	
+	public static void main(String[] args) throws IOException {
+		ServerSocket ss = new ServerSocket(8888);
+		System.out.println("Server started, listening on port 8888");
+		while (true) {
+			Socket client = new Socket();
+			client = ss.accept();
+			
+			DataInputStream dis = new DataInputStream(client.getInputStream());
+			
+			System.out.println(dis.readUTF());
+		}
+		
+		
+		
+	}
+}
